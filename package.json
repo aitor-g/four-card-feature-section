@@ -1,0 +1,14 @@
+{
+  "name": "four-card-feature-section",
+  "version": "1.0.0",
+  "description": "A basic example of a section made using four cards.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss:assets/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.62.0"
+  }
+}

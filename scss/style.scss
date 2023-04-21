@@ -1,0 +1,169 @@
+@use '../scss' as *;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section {
+  width: 100%;
+  min-height: 100vh;
+
+  @include onDesktop {
+    padding: 4rem 10rem;
+  }
+
+  @include onMobile {
+    padding: 5rem 2rem;
+  }
+}
+
+.header {
+  @include colCenter;
+  margin-bottom: 4rem;
+
+  &__titles {
+    @include colCenter;
+
+    &-light {
+      font-weight: $light;
+    }
+
+    &-bold {
+      font-weight: $semi;
+      color: $very-dark-blue;
+      margin-bottom: 0.6rem;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    color: $grayish-blue;
+  }
+
+  @include onDesktop {
+    &__titles {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+
+      &-light {
+        margin-bottom: -0.5rem;
+      }
+    }
+
+    &__subtitle {
+      width: 50%;
+      font-size: 1rem;
+    }
+  }
+
+  @include onMobile {
+    &__titles {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__component {
+    border: 1px solid $very-light-gray;
+    box-shadow: 0px 15px 15px 0px rgba($blue, 0.1);
+    border-radius: 10px;
+
+    &-title {
+      font-size: 1.2rem;
+      font-weight: $semi;
+      color: $very-dark-blue;
+      margin-bottom: 0.5rem;
+    }
+
+    &-description {
+      color: $grayish-blue;
+      margin-bottom: 2.5rem;
+      font-size: 0.8rem;
+    }
+
+    &-img {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+    }
+  }
+
+  @include onDesktop {
+
+    &__component {
+      width: 350px;
+      height: 250px;
+      padding: 2rem;
+
+      &-img {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+      }
+    }
+
+    .supervisor {
+      border-top: 5px solid $cyan;
+      margin: 0 1.8rem 0 0;
+    }
+
+    .team-builder {
+      border-top: 5px solid $red;
+      margin: 0 0 1.8rem 0;
+    }
+
+    .calculator {
+      border-top: 5px solid $blue;
+      margin: 0 0 0 1.8rem;
+    }
+
+    .karma {
+      border-top: 5px solid $orange;
+    }
+  }
+
+  @include onMobile {
+    flex-direction: column;
+
+    &__component {
+      width: 315px;
+      height: 220px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+
+      &-img {
+        height: 60px;
+      }
+    }
+
+    .supervisor {
+      border-top: 4px solid $cyan;
+    }
+
+    .team-builder {
+      border-top: 4px solid $red;
+    }
+
+    .calculator {
+      border-top: 4px solid $blue;
+    }
+
+    .karma {
+      border-top: 4px solid $orange;
+    }
+  }
+}
